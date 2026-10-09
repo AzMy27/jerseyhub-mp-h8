@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jersey E-Commerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/tailwindcss" href="css/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #111827; /* Warna gelap */
+        --color-primary-dark: #000000; /* Warna hitam murni */
+        --color-secondary: #10b981; /* Warna  hijau lapangan */
+        --color-secondary-dark: #059669; /* Warna hijau saat di-hover */
+        --color-accent: #f59e0b; /* Warna Emas */
+        --color-surface: #f8fafc; /* Warna latar belakang putih */
+      }
+    </style>
+  </head>
+  <body class="bg-surface">
+    <!-- Navbar -->
+    <div class="flex justify-between items-center gap-8 px-4 py-3 shadow-lg bg-primary-dark">
+      <a href="/" class="flex">
+        <h2 class="text-surface text-2xl font-bold tracking-wider">Jersey<span class="text-accent">Hub</span></h2>
+      </a>
+      <nav
+        class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-base hidden md:flex"
+        id="myLinks"
+      >
+        <a href="/" class="text-surface hover:text-secondary-dark transition-colors">Home</a>
+        <a href="/products" class="text-surface hover:text-secondary-dark transition-colors">Produk</a>
+        <a href="/gallery" class="text-surface hover:text-secondary-dark transition-colors">Galeri</a>
+        <a href="/about-us" class="text-surface hover:text-secondary-dark transition-colors">Tentang Kami</a>
+        <a href="/contact" class="text-surface hover:text-secondary-dark transition-colors">Kontak</a>
+        <a href="/login" class="text-surface hover:text-secondary-dark transition-colors">Login</a>
+      </nav>
+      <a href="javascript:void(0);" class="flex block md:hidden" onclick="myFunction()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 text-surface"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 6l16 0" />
+          <path d="M4 12l16 0" />
+          <path d="M4 18l16 0" />
+        </svg>
+      </a>
+    </div>
+    <!-- Main -->
+    <section class="px-8 py-12 min-h-screen">
+      <h1 class="text-center font-bold text-3xl text-primary mb-12 leading-tight">Tentang Kami</h1>
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col items-center justify-center rounded-lg shadow-lg px-6 py-8">
+          <p class="text-sm text-gray-400">
+            JerseyHub didirikan pada tahun 2024 dengan satu tujuan utama: menyediakan akses mudah bagi penggemar sepak
+            bola di Indonesia untuk mendapatkan jersey berkualitas tinggi. Kami mengerti bahwa jersey bukan sekadar
+            pakaian biasa, melainkan simbol identitas dan kebanggaan.
+          </p>
+          <p class="text-sm text-gray-400">
+            Oleh karena itu, kami melakukan kurasi ketat pada setiap produk yang kami jual. Mulai dari teknologi bahan
+            penyerap keringat hingga detail logo yang presisi, kami memastikan Anda mendapatkan kualitas yang setara
+            dengan harga yang Anda bayar. Kepuasan Anda di lapangan maupun di luar lapangan adalah prioritas tertinggi
+            kami.
+          </p>
+        </div>
+      </div>
+      <h2 class="text-center text-2xl font-bold text-primary mb-4 leading-tight mt-12">FAQ</h2>
+      <div class="max-w-4xl mx-auto">
+        <!-- Pertanyaan 1 -->
+        <div class="mb-4 shadow-lg rounded-lg">
+          <div
+            onclick="toggleFaq('faq1')"
+            class="flex rounded-lg shadow-lg px-6 py-4 mb-2 items-center justify-between bg-white cursor-pointer hover:bg-gray-50 transition-colors"
+          >
+            <h3 class="text-gray-800 font-semibold">Apakah jersey ini 100% original?</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </div>
+          <div class="hidden bg-gray-50 px-6 py-4 rounded-b-lg border-t border-gray-200" id="faq1">
+            <p class="text-sm text-gray-600">
+              Ya, tentu saja! Semua jersey kami 100% original dan dilengkapi dengan sertifikat serta tag resmi dari
+              apparel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 2 -->
+        <div class="mb-4 rounded-lg shadow-lg">
+          <div
+            onclick="toggleFaq('faq2')"
+            class="flex rounded-lg shadow-lg px-6 py-4 mb-2 items-center justify-between bg-white cursor-pointer hover:bg-gray-50 transition-colors"
+          >
+            <h3 class="text-gray-800 font-semibold">Berapa lama estimasi pengiriman pesanan?</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </div>
+          <div class="hidden bg-gray-50 px-6 py-4 rounded-b-lg border-t border-gray-200" id="faq2">
+            <p class="text-sm text-gray-600">
+              Ya, tentu saja! Semua jersey kami 100% original dan dilengkapi dengan sertifikat serta tag resmi dari
+              apparel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pertanyaan 3 -->
+        <div class="mb-4 rounded-lg shadow-lg">
+          <div
+            onclick="toggleFaq('faq3')"
+            class="flex rounded-lg shadow-lg px-6 py-4 mb-2 items-center justify-between bg-white cursor-pointer hover:bg-gray-50 transition-colors"
+          >
+            <h3 class="text-gray-800 font-semibold">Apakah saya bisa menukar ukuran jika kebesaran?</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 9l6 6l6 -6" />
+            </svg>
+          </div>
+          <div class="hidden bg-gray-50 px-6 py-4 rounded-b-lg border-t border-gray-200" id="faq3">
+            <p class="text-sm text-gray-600">
+              Ya, tentu saja! Semua jersey kami 100% original dan dilengkapi dengan sertifikat serta tag resmi dari
+              apparel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-surface pt-12 pb-6 mt-16 border-t-4 border-accent">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-8 px-8">
+        <!-- bagian kiri -->
+        <div class="flex flex-col max-w-sm">
+          <div class="flex items-center gap-2 mb-4">
+            <a href="/" class="flex">
+              <h2 class="text-surface text-2xl font-bold tracking-wider">Jersey<span class="text-accent">Hub</span></h2>
+            </a>
+            <!-- <img src="assets/psg-logo.png" alt="Logo PSG" class="h-10 w-10 object-contain" /> -->
+            <!-- <h2 class="text-2xl font-bold tracking-widest text-white">PSG <span class="text-accent">Store</span></h2> -->
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed">Penjelasan dalam footer</p>
+        </div>
+        <!-- bagian kanan -->
+        <div class="mt-8 md:mt-0">
+          <h3 class="text-lg font-bold text-white mb-4">Tautan Cepat</h3>
+          <div class="flex flex-col gap-2">
+            <a href="/products" class="text-surface hover:text-secondary-dark transition-colors">Produk</a>
+            <a href="/gallery" class="text-surface hover:text-secondary-dark transition-colors">Galeri</a>
+            <a href="/about-us" class="text-surface hover:text-secondary-dark transition-colors">Tentang Kami</a>
+            <a href="/contact" class="text-surface hover:text-secondary-dark transition-colors">Kontak</a>
+          </div>
+        </div>
+      </div>
+      <div class="mx-8 pt-4 text-center text-xs border-t border-gray-600 text-gray-400">
+        &copy; Dibuat oleh Muhammad Azmi
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
