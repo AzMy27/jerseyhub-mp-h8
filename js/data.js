@@ -5,7 +5,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/psg-home-24-25.jpg",
+    image: "/assets/psg-home-24-25.jpg",
     desc: "Jersey kebanggaan kota Paris. Tampil elegan dengan warna biru khas PSG dipadukan aksen merah-putih.",
   },
   {
@@ -14,7 +14,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/psg-away-24-25.jfif",
+    image: "/assets/psg-away-24-25.jfif",
     desc: "Desain tandang minimalis yang cocok untuk gaya kasual di luar lapangan maupun saat bermain.",
   },
   {
@@ -23,7 +23,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/real-madrid-home-24-25.avif",
+    image: "/assets/real-madrid-home-24-25.avif",
     desc: "Seragam putih ikonik dari sang raja Eropa. Dilengkapi material penyejuk premium.",
   },
   {
@@ -32,7 +32,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/real-madrid-away-24-25.jfif",
+    image: "/assets/real-madrid-away-24-25.jfif",
     desc: "Warna alternatif memukau yang memancarkan aura juara Los Blancos di markas lawan.",
   },
   {
@@ -41,7 +41,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/arsenal-home-24-25.jfif",
+    image: "/assets/arsenal-home-24-25.jfif",
     desc: "Meriam London telah siap! Kombinasi merah dan putih klasik untuk para Gooners sejati.",
   },
   {
@@ -50,7 +50,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/arsenal-away-24-25.jfif",
+    image: "/assets/arsenal-away-24-25.jfif",
     desc: "Tampil beda dengan desain modern yang terinspirasi dari kejayaan Arsenal di masa lalu.",
   },
   {
@@ -59,7 +59,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/bayern-munich-home-24-25.jfif",
+    image: "/assets/bayern-munich-home-24-25.jfif",
     desc: "Die Roten! Merah menyala melambangkan dominasi Bayern di tanah Jerman dan Eropa.",
   },
   {
@@ -68,7 +68,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/bayern-munich-away-24-25.jfif",
+    image: "/assets/bayern-munich-away-24-25.jfif",
     desc: "Desain tandang yang kokoh dan taktis, merepresentasikan gaya permainan spartan ala Bavaria.",
   },
   {
@@ -77,7 +77,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/inter-milan-home-24-25.jfif",
+    image: "/assets/inter-milan-home-24-25.jfif",
     desc: "Nerazzurri kembali beraksi! Strip hitam-biru klasik dengan sentuhan bahan ringan premium.",
   },
   {
@@ -86,7 +86,7 @@ var products = [
     stock: 50,
     price: 250000,
     year: "2024-2025",
-    image: "assets/inter-milan-away-24-25.jfif",
+    image: "/assets/inter-milan-away-24-25.jfif",
     desc: "Gaya elegan khas Milan. Jersey yang tidak hanya cocok untuk bertanding, tapi juga untuk bergaya santai.",
   },
 ];
@@ -146,9 +146,7 @@ if (categoryFilter) {
   });
 }
 
-function addToCart(nama, harga) {
-  
-}
+function addToCart(nama, harga) {}
 
 window.onload = function () {
   renderProducts(products);

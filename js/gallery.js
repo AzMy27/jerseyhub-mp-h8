@@ -49,7 +49,7 @@ function renderGalleries() {
         >
           <div class="overflow-hidden rounded-lg mb-4">
             <img
-              src="assets/ucl-win/${galleries[rows].image}"
+              src="/assets/ucl-win/${galleries[rows].image}"
               alt="${galleries[rows].name}"
               class="h-64 w-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
